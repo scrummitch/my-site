@@ -1,19 +1,65 @@
 {
-  "blog": {
-    "fields": {
-      "title": { "type": "string", "required": true },
-      "description": { "type": "string" },
-      "date": { "type": "date", "required": true },
-      "published": { "type": "boolean", "default": false },
-      "author": { "type": "string" },
-      "tags": { "type": "array" }
-    }
-  },
-  "docs": {
-    "fields": {
-      "title": { "type": "string", "required": true },
-      "description": { "type": "string" },
-      "published": { "type": "boolean", "default": true }
+  "name": "Collection",
+  "fields": {
+    "blog": {
+      "display": "Blog",
+      "fields": [
+        {
+          "handle": "title",
+          "display": "Title",
+          "type": "text",
+          "required": true
+        },
+        {
+          "handle": "description",
+          "display": "Description",
+          "type": "text"
+        },
+        {
+          "handle": "date",
+          "display": "Date",
+          "type": "date",
+          "required": true
+        },
+        {
+          "handle": "published",
+          "display": "Published",
+          "type": "boolean",
+          "default": false
+        },
+        {
+          "handle": "author",
+          "display": "Author",
+          "type": "text"
+        },
+        {
+          "handle": "tags",
+          "display": "Tags",
+          "type": "list"
+        }
+      ]
+    },
+    "docs": {
+      "display": "Docs",
+      "fields": [
+        {
+          "handle": "title",
+          "display": "Title",
+          "type": "text",
+          "required": true
+        },
+        {
+          "handle": "description",
+          "display": "Description",
+          "type": "text"
+        },
+        {
+          "handle": "published",
+          "display": "Published",
+          "type": "boolean",
+          "default": true
+        }
+      ]
     }
   }
 }
